@@ -1,0 +1,12 @@
+{
+    "ServiceName": "QueueConsumerMailer",
+    "GroupName": "Mailers",
+    "MetadataJson": "{\"Description\": \"Sample mailer service\"}",
+    "Job": {
+        "JobSchedule": {
+            "CronString": null,
+            "IntervalSeconds": 5,
+            "TimeoutSeconds": 300
+        }
+    }
+}
