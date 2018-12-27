@@ -1,5 +1,5 @@
 try {
-    let tester = getQueueTester();
+    let tester = MyEntryPoints.getQueueTester();
     tester.queueTestEmail().then(r => {
         console.log('Tester job done', r);
     }).catch(err => {

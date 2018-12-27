@@ -5,7 +5,7 @@ describe("EmailProcessor", () => {
 
     // publish test message to the queue
     beforeAll(async (done) => {
-        let tester = getQueueTester();
+        let tester = MyEntryPoints.getQueueTester();
         await tester.queueTestEmail();
         console.log("published QueueMessage.");
         done();
@@ -13,7 +13,7 @@ describe("EmailProcessor", () => {
 
     // run async test to receive queue message and send email
     beforeEach(async (done) => {
-        let processor = getEmailProcessor();
+        let processor = MyEntryPoints.getEmailProcessor();
         result = await processor.processMessage();
         console.log('bundle test', result);
         done();

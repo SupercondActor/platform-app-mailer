@@ -1,5 +1,5 @@
 try {
-    let processor = getEmailProcessor();
+    let processor = MyEntryPoints.getEmailProcessor();
     processor.processMessage().then(r => {
         console.log('Mailer job done', r);
     }).catch(err => {

@@ -4,9 +4,7 @@
     "MetadataJson": "{\"Description\": \"Testing for the Simple mailer service\"}",
     "Job": {
         "JobSchedule": {
-            "CronString": null,
-            "IntervalSeconds": 30,
-            "TimeoutSeconds": 10
+            "IntervalSeconds": 30
         }
     }
 }
