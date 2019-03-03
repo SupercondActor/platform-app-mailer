@@ -1,10 +1,9 @@
 {
-    "ServiceName": "MailerTest",
+    "ServiceName": "Mailer Test",
     "GroupName": "Tests",
     "MetadataJson": "{\"Description\": \"Testing for the Simple mailer service\"}",
-    "Job": {
-        "JobSchedule": {
-            "IntervalSeconds": 30
-        }
+    "StopRequested": true,
+    "JobSchedule": {
+        "IntervalSeconds": 30
     }
 }

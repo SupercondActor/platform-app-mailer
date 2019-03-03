@@ -1,14 +1,16 @@
 import { EmailProcessor } from "../src/app/email-processor";
 import { QueueTester } from "../src/app/queue-tester";
+import {_SupercondActorMock} from "../spec/support/SupercondActorMock"
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
 
 describe("EmailProcessor", () => {
     let result: any;
+    let supercondActor = new _SupercondActorMock();
 
     // publish test message to the queue
     beforeAll(async (done) => {
-        let tester = new QueueTester();
+        let tester = new QueueTester(supercondActor);
         await tester.queueTestEmail();
         console.log("published QueueMessage.");
         done();

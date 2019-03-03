@@ -8,6 +8,7 @@ export class EmailProvider {
     }
 
     sendEmail(message: EmailMessage): Promise<string> {
+        console.log('Sending message', message)
         let msgBody: AWS.SES.Body = {};
         if (!!message.bodyHtml) {
             msgBody.Html = {
@@ -40,6 +41,7 @@ export class EmailProvider {
         return new Promise<string>((resolve, reject) => {
             var sendPromise = new AWS.SES({ apiVersion: '2010-12-01' }).sendEmail(sendEmailParams).promise();
             sendPromise.then(data => {
+                console.log('Returned from Amazon:', data);
                 resolve(data.MessageId);
             }).catch(err => {
                 reject(err);

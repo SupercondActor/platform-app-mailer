@@ -1,0 +1,8 @@
+{
+    "ServiceName": "Queue Mailer",
+    "GroupName": "Mailers",
+    "MetadataJson": "{\"Description\": \"Sample mailer service\"}",
+    "JobSchedule": {
+        "IntervalSeconds": 5
+    }
+}

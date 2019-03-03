@@ -1,11 +1,8 @@
 try {
-    let tester = MyEntryPoints.getQueueTester();
-    tester.queueTestEmail().then(r => {
-        console.log('Tester job done', r);
-    }).catch(err => {
-        console.error('Tester error', err);
-    });
+    let tester = new MyServiceTypes.QueueTester(_SupercondActor);
+    let r = await tester.queueTestEmail();
+    console.log('Tester job done', r);
 }
 catch (er) {
-    console.error('Tester error', er);
+    console.error('Tester error: ' + er);
 }
