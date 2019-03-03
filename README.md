@@ -10,7 +10,7 @@
 
 ### How to build and install
 
-- clone this project
+- clone this repository
 - in the project's root folder run command: `npm run build`
 - using the SupercondActor Manager UI upload the Application Services Code package file ./dist/BusinessScriptBundle.zip that you just created.
 
